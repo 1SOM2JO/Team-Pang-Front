@@ -7,10 +7,10 @@ export const NoLoginText = styled.div`
     font-size : 20px;
     display : flex;
     justify-content : flex-end;
-    height : 50px;
+    height : 10px;
     align-items : center;
     > div{
-        margin : 0 10px;
+        margin : 0 20px;
     }
 `
 

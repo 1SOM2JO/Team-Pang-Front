@@ -20,6 +20,7 @@ const MainHeader = () => {
         <S.Text>
           <div onClick={experienceClick}>먹거리 체험</div>
           <div onClick={buyClick}>상품구매</div>
+          <div>등록하기</div>
         </S.Text>
       </S.Maindiv>
     </>

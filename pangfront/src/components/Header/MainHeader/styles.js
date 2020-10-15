@@ -9,7 +9,7 @@ export const Maindiv = styled.div`
   width: 80%;
   margin: 0 auto;
   display: flex;
-  height: 110px;
+  height: 90px;
   justify-content: space-between;
 
   > div {
@@ -32,6 +32,6 @@ export const Text = styled.div`
   font-size: 30px;
   font-family: IBMPlexSansKR-Text;
   > div {
-    margin: 0 10px;
+    margin: 0 20px;
   }
 `;

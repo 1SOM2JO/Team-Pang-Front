@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from './components/Header/Header'
+import ApplyItem from './components/DetailItem/applyItem/applyItem';
 
 function App() {
   return (
-   <Header>
+   <ApplyItem>
      
-   </Header>
+   </ApplyItem>
   );
 }
 

@@ -1,13 +1,14 @@
 import React from "react";
 import LoginHeader from "./LoginHeader/LoginHeader";
 import MainHeader from "./MainHeader/MainHeader";
+import * as S from './HeaderStyle'
 
 const Header = () => {
   return (
-    <div>
+    <S.HeaderBox>
       <MainHeader />
       <LoginHeader />
-    </div>
+    </S.HeaderBox>
   );
 };
 
