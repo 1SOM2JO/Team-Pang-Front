@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./styles";
-import logo1 from "../../../asset/logo.png";
+
 
 const MainHeader = () => {
   const buyClick = () => {
@@ -15,7 +15,7 @@ const MainHeader = () => {
       <S.Maindiv>
         <S.Logo>
           <S.MainText>일섬이조</S.MainText>
-          <img src={logo1}></img>
+        
         </S.Logo>
         <S.Text>
           <div onClick={experienceClick}>먹거리 체험</div>
