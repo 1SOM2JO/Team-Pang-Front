@@ -10,6 +10,7 @@ const ApplyItem = () => {
     <S.Container>
       <S.GlobalStyle />
       <Header></Header>
+      <img src="../../../img/Title.png"></img>
       <S.MainBox>
         <S.ImguploadBox>
           <S.importantImgBox>
@@ -34,27 +35,35 @@ const ApplyItem = () => {
             <S.Price>가격</S.Price>
             <S.colorText>*</S.colorText>
             <S.Unit>단위</S.Unit>
-            <S.colorText>*</S.colorText>        
+            <S.colorText>*</S.colorText>
           </S.PriceBox>
           <S.PriceInputBox>
-            <S.PriceInput placeholder="가격을 입력해주세요"/>
+            <S.PriceInput placeholder="가격을 입력해주세요" type="number"/>
             <S.PriceTail>원</S.PriceTail>
             <S.UnitInput></S.UnitInput>
             <S.PriceTail>개</S.PriceTail>
-            <S.chooseUnit color={'#219F70'}>∨</S.chooseUnit>
+            <S.chooseUnit color={"#219F70"}>
+              <option value="밥">g</option>
+              <option value="kg">kg</option>
+              <option value="밥">mL</option>
+              <option value="밥">L</option>
+            </S.chooseUnit>
           </S.PriceInputBox>
           <S.localBox>
             <S.ItemName>지역</S.ItemName>
             <S.colorText>*</S.colorText>
           </S.localBox>
           <S.ChooseLocal>
-          <S.chooseCity>도 · 광역시</S.chooseCity>
-          <S.chooseUnit color={'#000000'}>∨</S.chooseUnit>
-          <S.choosevillage>시 · 군 · 구</S.choosevillage>
-          <S.chooseUnit color={'#000000'}>∨</S.chooseUnit>
+            <S.chooseCity>도 · 광역시</S.chooseCity>
+            <S.chooseUnit color={"#000000"}>∨</S.chooseUnit>
+            <S.choosevillage>시 · 군 · 구</S.choosevillage>
+            <S.chooseUnit color={"#000000"}>∨</S.chooseUnit>
           </S.ChooseLocal>
           <S.Description>설명</S.Description>
-          <textarea></textarea>
+          <S.InputDescription placeholder="설명을 입력하세요"></S.InputDescription>
+          <form>
+            <S.Submit>등록하기</S.Submit>
+          </form>
         </S.ItemExplainBox>
       </S.MainBox>
     </S.Container>

@@ -31,6 +31,7 @@ export const importantImgBox = styled.div`
 `;
 export const importantImgText = styled.div`
   font-size: 23px;
+  font-weight:bold;
 `;
 
 export const importantStar = styled.div`
@@ -67,6 +68,7 @@ display:flex;
     
 `
 export const ItemName = styled.div`
+font-weight:bold;
 font-size: 23px;
 `
 export const UserItemName = styled.textarea`
@@ -91,11 +93,13 @@ export const PriceBox = styled.div`
 
 `
 export const Price = styled.div`
+font-weight:bold;
 font-size:20px;
 `
 export const Unit = styled.div`
   font-size:20px;
   margin-left:170px;
+  font-weight:bold;
 `
 export const PriceInputBox = styled.div`
   display:flex;
@@ -109,6 +113,9 @@ export const PriceInput = styled.input`
      padding-top:15px;
      color:#D4D4D4;
   }
+  text-align:center;
+  -webkit-appearance: none;
+  ime-mode:disabled;
 
 `
 export const UnitInput = styled.input`
@@ -121,13 +128,15 @@ export const PriceTail = styled.div`
   font-weight:bold;
   margin:0 3px;
 `
-export const chooseUnit = styled.div`
+export const chooseUnit = styled.select`
 color:${props=>props.color};
   display:flex;
   align-items:center;
-
+  border:none;
   font-weight:bold;
   font-size:20px;
+  width:20px;
+  outline:none;
 `
 export const ChooseLocal = styled.div`
   display:flex;
@@ -152,4 +161,28 @@ border:none;
 export const Description =styled.div`
   font-size:26px;
   margin-top:5px;
+  font-weight:bold;
+`
+export const InputDescription = styled.textarea`
+  width:89%;
+  height:240px;
+  resize: none;
+  outline:none;
+    &::placeholder{
+     text-align:center;
+     padding-top:100px;
+     color:#D4D4D4;
+  }
+` 
+
+export const Submit= styled.button`
+margin-top:20px;
+  background-color:#AAF1BB;
+  width:90%;
+  height:50px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border:none;
+  outline:none;
 `
