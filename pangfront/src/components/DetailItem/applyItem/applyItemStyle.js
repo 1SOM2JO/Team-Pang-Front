@@ -45,7 +45,8 @@ export const colorText = styled.div`
 `;
 
 export const inputLabel = styled.label`
-  height: 100%;
+  margin-top:15px;
+  height: 95%;
   width: 100%;
   display: flex;
   border: 1px solid #c4c4c4;
@@ -58,18 +59,18 @@ export const Imginput = styled.input`
   outline: none;
 `;
 export const ItemExplainBox = styled.div`
-
+  margin-top:30px;
   flex: 1;
   height:550px;
   padding-left:30px;
 `;
 export const ItemNameBox = styled.div`
 display:flex;
-    
+
 `
 export const ItemName = styled.div`
 font-weight:bold;
-font-size: 23px;
+font-size:18px; 
 `
 export const UserItemName = styled.textarea`
   margin-top:3px;
@@ -77,6 +78,7 @@ export const UserItemName = styled.textarea`
   height:60px;
   resize: none; 
   outline:none;
+  text-align:center;
   border:1px solid #C4C4C4;
   &::placeholder{
      text-align:center;
@@ -91,13 +93,14 @@ export const PriceBox = styled.div`
   display:flex;
   width:85%;
 
+
 `
 export const Price = styled.div`
 font-weight:bold;
-font-size:20px;
+font-size: 18px;
 `
 export const Unit = styled.div`
-  font-size:20px;
+      font-size: 18px;
   margin-left:170px;
   font-weight:bold;
 `
@@ -116,11 +119,22 @@ export const PriceInput = styled.input`
   text-align:center;
   -webkit-appearance: none;
   ime-mode:disabled;
+  &::-webkit-outer-spin-button,
+&::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 `
 export const UnitInput = styled.input`
  border:1px solid #C4C4C4;
  outline:none;
+ -webkit-appearance: none;
+  ime-mode:disabled;
+  &::-webkit-outer-spin-button,
+&::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 `
 export const PriceTail = styled.div`
   color:#219F70;
@@ -134,12 +148,13 @@ color:${props=>props.color};
   align-items:center;
   border:none;
   font-weight:bold;
-  font-size:20px;
+  font-size: 18px;
   width:20px;
   outline:none;
 `
 export const ChooseLocal = styled.div`
   display:flex;
+  margin:10px 0px;
 `
 export const localBox = styled.div`
   display:flex;
@@ -149,17 +164,20 @@ export const localBox = styled.div`
 `
 export const chooseCity = styled.div`
   border:none;
-  font-size:23px;
+     font-size: 18px;
   margin-right:10px;
+ 
+
 `
 export const choosevillage = styled.div`
 border:none;
-  font-size:23px;
+  font-size:18px;
   margin-left:50px;
   margin-right:10px;
+ 
 `
 export const Description =styled.div`
-  font-size:26px;
+    font-size: 18px;
   margin-top:5px;
   font-weight:bold;
 `

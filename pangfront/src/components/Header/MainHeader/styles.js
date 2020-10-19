@@ -9,7 +9,7 @@ export const Maindiv = styled.div`
   width: 80%;
   margin: 0 auto;
   display: flex;
-  height: 90px;
+  height: 70px;
   justify-content: space-between;
 
   > div {
@@ -26,10 +26,10 @@ export const Logo = styled.div`
 
 export const MainText = styled.div`
   font-family: ImcreSoojin;
-  font-size: 37px;
+  font-size: 30px;
 `;
 export const Text = styled.div`
-  font-size: 30px;
+  font-size: 23px;
   font-family: IBMPlexSansKR-Text;
   > div {
     margin: 0 20px;
