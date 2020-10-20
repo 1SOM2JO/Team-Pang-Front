@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-
+import styled from "styled-components";
 
 export const chooseUnit = styled.select`
   color: ${(props) => props.color};
@@ -32,8 +31,8 @@ export const choosevillage = styled.div`
   margin-right: 10px;
 `;
 export const ItemName = styled.div`
-font-weight: bold;
-font-size: 18px;
+  font-weight: bold;
+  font-size: 18px;
 `;
 export const colorText = styled.div`
   color: #ff0404;

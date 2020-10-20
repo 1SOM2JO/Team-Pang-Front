@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const ImguploadBox = styled.div`
   width: 60%;
   height: 500px;
@@ -34,5 +33,4 @@ export const inputLabel = styled.label`
 export const Imginput = styled.input`
   width: 0px;
   outline: none;
-  
 `;

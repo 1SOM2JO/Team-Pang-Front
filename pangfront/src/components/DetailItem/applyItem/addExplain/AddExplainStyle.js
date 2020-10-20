@@ -1,12 +1,4 @@
-import styled from 'styled-components';
-
-
-export const ItemExplainBox = styled.div`
-  margin-top: 30px;
-  flex: 1;
-  height: 550px;
-  padding-left: 30px;
-`;
+import styled from "styled-components";
 
 export const Description = styled.div`
   font-size: 18px;

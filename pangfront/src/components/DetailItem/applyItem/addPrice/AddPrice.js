@@ -1,10 +1,10 @@
-import React, {useState, useCallback} from "react";
-import * as S from './AddPriceStyle.js'
+import React, { useState, useCallback } from "react";
+import * as S from "./AddPriceStyle.js";
 const AddPrice = () => {
-    const [count, setCount] = useState("개");
-    const countChange = useCallback((e) => {
-        setCount(e.target.value);
-      }, []);
+  const [count, setCount] = useState("개");
+  const countChange = useCallback((e) => {
+    setCount(e.target.value);
+  }, []);
   return (
     <>
       <S.PriceBox>
@@ -33,4 +33,4 @@ const AddPrice = () => {
   );
 };
 
-export default AddPrice
+export default AddPrice;

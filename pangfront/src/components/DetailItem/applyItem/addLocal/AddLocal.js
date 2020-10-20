@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import BigCityName from "../BigCity.js";
 import smallCity from "../smallCity.js";
-import * as S from './AddLocalStyle.js'
+import * as S from "./AddLocalStyle.js";
 
 const AddLocal = () => {
   const [bigCity, setBigCity] = useState("도 · 광역시");
@@ -37,4 +37,4 @@ const AddLocal = () => {
     </>
   );
 };
-export default AddLocal
+export default AddLocal;
