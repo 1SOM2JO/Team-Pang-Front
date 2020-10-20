@@ -1,5 +1,5 @@
 import React from 'react';
-import ApplyItem from './components/DetailItem/applyItem/applyItem';
+import ApplyItem from './components/DetailItem/applyItem/ApplyItem';
 
 function App() {
   return (

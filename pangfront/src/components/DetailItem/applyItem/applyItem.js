@@ -1,23 +1,27 @@
 import React, { useState, useCallback } from "react";
 import Header from "../../Header/Header";
-import * as S from "./applyItemStyle.js";
+import * as S from "./ApplyItemStyle.js";
 import BigCityName from "./BigCity.js";
 import smallCity from "./smallCity.js";
 const ApplyItem = () => {
   const [bigCity, setBigCity] = useState("도 · 광역시");
   const [city, setCity] = useState("시 · 군 · 구");
-  const [count, setCount] = useState('개')
+  const [count, setCount] = useState("개");
   const [img, setImg] = useState(null);
   const [imgBase64, setImgBase64] = useState("");
   const bigCityChange = useCallback((e) => {
     setBigCity(e.target.value);
   }, []);
-  const cityChange = useCallback((e)=>{
+  const cityChange = useCallback((e) => {
     setCity(e.target.value);
-  },[])
-  const countChange = useCallback((e)=>{
-    setCount(e.target.value)
-  },[])
+  }, []);
+  const countChange = useCallback((e) => {
+    setCount(e.target.value);
+  }, []);
+  const imgChange = useCallback((e) => {
+    console.log(URL.createObjectURL(e.target.files[0]))
+    setImg(URL.createObjectURL(e.target.files[0]));
+  }, []);
   return (
     <S.Container>
       <S.GlobalStyle />
@@ -28,8 +32,12 @@ const ApplyItem = () => {
             <S.importantImgText>사진</S.importantImgText>
             <S.colorText>*</S.colorText>
           </S.importantImgBox>
-          <S.inputLabel for="imgFile">사진등록</S.inputLabel>
-          <S.Imginput type="file" id="imgFile"></S.Imginput>
+          <S.inputLabel for="imgFile" img={img}>
+            사진등록
+          </S.inputLabel>
+          <form>
+            <S.Imginput type="file" id="imgFile" onChange={imgChange}></S.Imginput>
+          </form>
         </S.ImguploadBox>
         <S.ItemExplainBox>
           <S.ItemNameBox>
@@ -50,7 +58,7 @@ const ApplyItem = () => {
           </S.PriceBox>
           <S.PriceInputBox>
             <S.PriceInput placeholder="가격을 입력해주세요" type="number" />
-            <S.PriceTail >원</S.PriceTail>
+            <S.PriceTail>원</S.PriceTail>
             <S.UnitInput type="number"></S.UnitInput>
             <S.PriceTail>{count}</S.PriceTail>
             <S.chooseUnit color={"#219F70"} onChange={countChange}>
@@ -71,9 +79,12 @@ const ApplyItem = () => {
             </S.chooseUnit>
             <S.choosevillage>{city}</S.choosevillage>
             <S.chooseUnit color={"#000000"} onChange={cityChange}>
-              {useCallback(smallCity(bigCity).map(smallCityName=>{
-                return <option>{smallCityName}</option>
-              }),[bigCity])}
+              {useCallback(
+                smallCity(bigCity).map((smallCityName) => {
+                  return <option>{smallCityName}</option>;
+                }),
+                [bigCity]
+              )}
             </S.chooseUnit>
           </S.ChooseLocal>
           <S.Description>설명</S.Description>
