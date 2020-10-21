@@ -11,6 +11,7 @@ export const Maindiv = styled.div`
   display: flex;
   height: 70px;
   justify-content: space-between;
+  
 
   > div {
     display: flex;
@@ -22,6 +23,8 @@ export const Logo = styled.div`
   > img {
     margin-left: 17px;
   }
+  margin-left:20px;
+  transform:translate(-65px);
 `;
 
 export const MainText = styled.div`
@@ -34,4 +37,5 @@ export const Text = styled.div`
   > div {
     margin: 0 20px;
   }
+  transform:translate(40px);
 `;

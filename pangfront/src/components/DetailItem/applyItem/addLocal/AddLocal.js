@@ -20,15 +20,15 @@ const AddLocal = () => {
         <S.colorText>*</S.colorText>
       </S.localBox>
       <S.ChooseLocal>
-        <S.chooseCity>{bigCity}</S.chooseCity>
+        <S.chooseCity required>{bigCity}</S.chooseCity>
         <S.chooseUnit color={"#000000"} onChange={bigCityChange}>
           <BigCityName></BigCityName>
         </S.chooseUnit>
-        <S.choosevillage>{city}</S.choosevillage>
+        <S.choosevillage required>{city}</S.choosevillage>
         <S.chooseUnit color={"#000000"} onChange={cityChange}>
           {useCallback(
             smallCity(bigCity).map((smallCityName) => {
-              return <option>{smallCityName}</option>;
+              return <option >{smallCityName}</option>;
             }),
             [bigCity]
           )}

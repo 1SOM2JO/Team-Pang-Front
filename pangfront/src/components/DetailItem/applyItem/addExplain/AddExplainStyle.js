@@ -7,12 +7,15 @@ export const Description = styled.div`
 `;
 export const InputDescription = styled.textarea`
   width: 89%;
-  height: 240px;
+  padding:10px;
+  height:${props=>(props.height)};
   resize: none;
   outline: none;
+  line-height:${props=>(props.height)};
+  text-align:center;
   &::placeholder {
-    text-align: center;
-    padding-top: 100px;
+
+    
     color: #d4d4d4;
   }
   -ms-overflow-style: none;

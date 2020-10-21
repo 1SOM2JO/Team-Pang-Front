@@ -9,15 +9,16 @@ export const ItemName = styled.div`
 `;
 export const UserItemName = styled.textarea`
   margin-top: 3px;
-  width: 85%;
+  width: 90%;
   height: 60px;
   resize: none;
   outline: none;
   text-align: center;
   border: 1px solid #c4c4c4;
+  line-height:60px;
+  text-align:center;
   &::placeholder {
-    text-align: center;
-    padding-top: 15px;
+    
     color: #d4d4d4;
   }
   overflow: hidden;

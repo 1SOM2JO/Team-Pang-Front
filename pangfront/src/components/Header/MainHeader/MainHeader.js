@@ -1,5 +1,6 @@
 import React from "react";
 import * as S from "./styles";
+import logo from '../../../img/Title.png'
 
 
 const MainHeader = () => {
@@ -12,11 +13,11 @@ const MainHeader = () => {
   return (
     <>
       <S.GlobalStyle />
+      
       <S.Maindiv>
         <S.Logo >
-          <img src="../../../img/Title.png"></img>
           <S.MainText>일섬이조</S.MainText>
-
+          <img src={logo}></img>
         </S.Logo>
         <S.Text>
           <div onClick={experienceClick}>먹거리 체험</div>

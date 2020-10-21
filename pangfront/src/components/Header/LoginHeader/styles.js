@@ -12,6 +12,7 @@ export const NoLoginText = styled.div`
     > div{
         margin : 0 20px;
     }
+    transform:translate(40px);
 `
 
 export const Maindiv = styled.div`

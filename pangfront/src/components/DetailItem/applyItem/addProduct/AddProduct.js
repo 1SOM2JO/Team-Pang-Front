@@ -1,17 +1,18 @@
-import React from "react";
+import React,{useState} from "react";
 import * as S from "./AddProductStyle.js";
-const AddProduct = () => {
+const AddProduct = (props) => {
+  console.log(props.children);
   return (
     <>
       <S.ItemNameBox>
-        <S.ItemName>상품명</S.ItemName>
+        <S.ItemName>{props.children}</S.ItemName>
         <S.colorText>*</S.colorText>
       </S.ItemNameBox>
       <S.UserItemName
         maxlength="1"
         cols="2"
         rows="2"
-        placeholder="상품명을 입력해주세요"
+        placeholder={`${props.children}을 입력해주세요`}
         required
       ></S.UserItemName>
     </>

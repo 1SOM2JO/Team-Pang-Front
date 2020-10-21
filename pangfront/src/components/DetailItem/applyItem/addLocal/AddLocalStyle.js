@@ -9,6 +9,10 @@ export const chooseUnit = styled.select`
   font-size: 18px;
   width: 20px;
   outline: none;
+  &>option{
+   font-size:15px
+  }
+  
 `;
 export const ChooseLocal = styled.div`
   display: flex;
@@ -21,12 +25,12 @@ export const localBox = styled.div`
 `;
 export const chooseCity = styled.div`
   border: none;
-  font-size: 18px;
+  font-size: 14px;
   margin-right: 10px;
 `;
 export const choosevillage = styled.div`
   border: none;
-  font-size: 18px;
+  font-size: 14px;
   margin-left: 50px;
   margin-right: 10px;
 `;

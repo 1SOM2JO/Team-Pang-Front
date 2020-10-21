@@ -2,6 +2,7 @@ import React, { useState, useCallback } from "react";
 import * as S from "./AddImgStyle";
 const AddImg = () => {
   const [img, setImg] = useState(null);
+  // const [img]
   const imgChange = useCallback((e) => {
     setImg(URL.createObjectURL(e.target.files[0]));
   }, []);

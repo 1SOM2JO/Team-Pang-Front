@@ -1,10 +1,10 @@
 import React from "react";
 import * as S from "./AddExplainStyle.js";
-const AddExplain = () => {
+const AddExplain = ({height}) => {
   return (
     <>
       <S.Description>설명</S.Description>
-      <S.InputDescription placeholder="설명을 입력하세요"></S.InputDescription>
+      <S.InputDescription placeholder="설명을 입력하세요" required height={height}></S.InputDescription>
     </>
   );
 };

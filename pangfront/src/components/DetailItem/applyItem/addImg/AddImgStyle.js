@@ -4,6 +4,8 @@ export const ImguploadBox = styled.div`
   width: 60%;
   height: 500px;
   margin-right: 50px;
+  margin-left:20px;
+  margin-top:17px;
 `;
 export const importantImgBox = styled.div`
   display: flex;
