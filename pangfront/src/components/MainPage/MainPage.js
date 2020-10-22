@@ -1,5 +1,6 @@
 import React from 'react';
 import * as S from './styles';
+import Header from './../Header/Header';
 
 const MainPage = () => {
     const develope = ['신두평','박재훈','유명철','이성진','이지수','최승교'];
@@ -12,6 +13,7 @@ const MainPage = () => {
 
     return (
         <>
+            <Header></Header>
             <S.MainImage></S.MainImage>
             <S.Contents1>
                 <S.Text1>

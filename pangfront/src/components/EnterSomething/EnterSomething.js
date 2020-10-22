@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import * as S from './styles.js'
+import Header from './../Header/Header';
 
 const EnterSomething = () => {
     const [product, setProduct] = useState(false);
@@ -7,6 +8,7 @@ const EnterSomething = () => {
 
     return (
         <div>
+            <Header></Header>
             <S.Contents>
                 <S.ProductDiv onMouseEnter={() => setProduct(true)} onMouseLeave={() => setProduct(false)}>
                     <S.BlindDiv view={product}></S.BlindDiv>
