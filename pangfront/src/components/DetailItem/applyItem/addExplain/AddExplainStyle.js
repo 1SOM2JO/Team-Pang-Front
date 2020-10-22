@@ -11,11 +11,10 @@ export const InputDescription = styled.textarea`
   height:${props=>(props.height)};
   resize: none;
   outline: none;
-  line-height:${props=>(props.height)};
+
   text-align:center;
   &::placeholder {
-
-    
+    padding-top:calc(${props=>(props.height)}/2.3);
     color: #d4d4d4;
   }
   -ms-overflow-style: none;

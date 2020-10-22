@@ -15,10 +15,10 @@ export const UserItemName = styled.textarea`
   outline: none;
   text-align: center;
   border: 1px solid #c4c4c4;
-  line-height:60px;
+ 
   text-align:center;
   &::placeholder {
-    
+    padding-top:15px;   
     color: #d4d4d4;
   }
   overflow: hidden;

@@ -4,7 +4,7 @@ import ApplyExperience from './components/DetailItem/apllyExperience/ApplyExperi
 function App() {
   return (<>
      <ApplyExperience/>
-    <ApplyItem/>
+
   </>
  
   );
