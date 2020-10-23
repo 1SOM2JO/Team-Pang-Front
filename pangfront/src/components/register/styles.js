@@ -103,6 +103,11 @@ export const InputDiv = styled.div`
         font-size: 15px;
         text-align: center;
       }
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
       > p:nth-child(1) {
         margin-right: 80px;
       }
