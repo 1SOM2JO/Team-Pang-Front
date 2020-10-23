@@ -92,18 +92,24 @@ const Register = () => {
                 onChange={changeInputData}
                 name="numberFirst"
                 value={inputData.numberFirst}
+                type="number"
+                maxLength="3"
               />
               <div>-</div>
               <input
                 onChange={changeInputData}
                 name="numberSecond"
                 value={inputData.numberSecond}
+                type="number"
+                maxLength="4"
               />
               <div>-</div>
               <input
                 onChange={changeInputData}
                 name="numberThird"
                 value={inputData.numberThird}
+                type="number"
+                maxLength="4"
               />
               <button onClick={onCheckClick}>인증번호받기</button>
             </div>
