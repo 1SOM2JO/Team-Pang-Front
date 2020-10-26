@@ -1,4 +1,8 @@
-import styled from 'styled-components';
+import styled, {createGlobalStyle} from 'styled-components';
+
+export const GlobalStyle = createGlobalStyle`
+    @font-face { font-family: 'JSDongkang-Regular'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSDongkang-RegularA1.woff') format('woff'); font-weight: normal; font-style: normal; }@font-face { font-family: 'JSDongkang-Regular'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSDongkang-RegularA1.woff') format('woff'); font-weight: normal; font-style: normal; }
+`
 
 export const Container = styled.div`
 margin-top:-10px;   
@@ -19,5 +23,26 @@ height:35px;
 export const UserDataBox= styled.div`
     height:100%;
     width:100%;
-    background-color:blue;
+    padding-left:10px;
+`
+export const UserName = styled.div`
+    height:50%;
+`
+export const UserCall = styled.div`
+    height:50%;
+`
+export const ReportBox = styled.div`
+    flex:1;
+    display:flex;   
+    justify-content:flex-end;
+`
+export const Report = styled.img`
+padding:5px;
+width:35px;
+height:35px;
+margin-right:10px;
+`
+export const Heart = styled.img`padding:5px;
+width:35px;
+height:35px;
 `

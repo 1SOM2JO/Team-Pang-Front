@@ -8,7 +8,9 @@ export const NoLoginText = styled.div`
     display : flex;
     justify-content : flex-end;
     height : 10px;
+    padding-top:10px;
     align-items : center;
+    background-color:#FDFDFD;
     > div{
         margin : 0 20px;
     }
@@ -17,5 +19,11 @@ export const NoLoginText = styled.div`
 
 export const Maindiv = styled.div`
     width : 80%;
+    
     margin : 0 auto;
+`
+export const MainBox = styled.div`
+    background-color:#FDFDFD;
+    width:100%;
+    height:30px;
 `

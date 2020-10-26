@@ -1,7 +1,8 @@
 import React from "react";
 import Header from "../../Header/Header";
 import * as S from "./ViewItemStyle.js";
-import AddImg from "./addImg/AddImg.js";
+import SetImg from "./setImg/SetImg.js";
+import ItemDetail from './itemDetail/ItemDetail.js'
 import ReportBar from './reportBar/ReportBar.js'
 const ViewItem = () => {
   return (
@@ -9,8 +10,10 @@ const ViewItem = () => {
       <S.GlobalStyle />
       <Header></Header>
       <S.MainBox>
-        <AddImg ReportBar={ReportBar}></AddImg>
+        <SetImg ReportBar={ReportBar}></SetImg>
+        <ItemDetail></ItemDetail>
       </S.MainBox>
+      <S.ChattingBox></S.ChattingBox>
     </>
   );
 };
