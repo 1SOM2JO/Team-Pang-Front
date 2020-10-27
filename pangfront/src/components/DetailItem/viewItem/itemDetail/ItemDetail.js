@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
 import * as S from "./ItemDetailStyle.js";
-import BoxMap from '../boxMap/BoxMap.js'
+import StarMap from '../starMap/StarMap.js'
 
 
 const ItemTitle = () => {
@@ -17,7 +17,7 @@ const ItemTitle = () => {
       <S.Local>{local}</S.Local>
       <S.Description>{discription}</S.Description>
       <S.StarBox>
-        <BoxMap/>
+        <StarMap width={40}/>
       </S.StarBox>
     </S.Container>
   );

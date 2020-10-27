@@ -1,10 +1,10 @@
 import React, { useState, useCallback} from "react";
 import NoneStar from "../../../../img/NoneStar.png";
 import OnStar from "../../../../img/OnStar.png";
-import * as S from "./BoxMapStyle";
-const BoxMap = () => {
+import * as S from "./StarMapStyle";
+const StarMap = (props) => {
   const [StarArr, setStarArr] = useState([false, false, false, false, false]); // Star 배열
-
+  
   const BoxStyle = useCallback((index) => {
     const newStarArr = StarArr.map((obj, i) => {
       if (i <= index) return true;
@@ -20,10 +20,11 @@ const BoxMap = () => {
           BoxStyle(index);
         }}
         src={clicked ? OnStar : NoneStar}
+        width={props.width}
       ></S.Star>
     );
   });
   return arr;
 };
 
-export default BoxMap;
+export default StarMap ;

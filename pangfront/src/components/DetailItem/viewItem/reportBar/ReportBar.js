@@ -1,13 +1,25 @@
 import React, { useState, useCallback } from "react";
 import * as S from "./ReportBarStyle.js";
+import ReportModal from "./reportModal/ReportModal.js";
 import UserImg from "../../../../img/BasicPerson.png";
 import BeforeHeart from "../../../../img/BeforeHeart.png";
 import BeforeReport from "../../../../img/BeforeReport.png";
+import Heart from "../../../../img/Heart.png";
 const ReportBar = () => {
-  const [userName, setuserName] = useState('신두평');
-  const [call, setcall] = useState('010-1111-4444');
+  const [userName, setuserName] = useState("신두평");
+  const [call, setcall] = useState("010-1111- 4444");
+  const [heart, setHeart] = useState(false);
+  const [report, setReport] = useState(false);
+  const reportModal = () => {
+    setReport((prev) => !prev);
+  };
+  const HeartSet = useCallback(() => {
+    if (heart) setHeart(false);
+    else setHeart(true);
+  }, [heart]);
   return (
     <S.Container>
+      {report && <S.reportBackGround />}
       <S.GlobalStyle />
       <S.UserBox>
         <S.UserImg src={UserImg} />
@@ -17,25 +29,12 @@ const ReportBar = () => {
         </S.UserDataBox>
       </S.UserBox>
       <S.ReportBox>
-        <S.Report src={BeforeReport} />
-        <S.Heart src={BeforeHeart} />
+        <S.Report src={BeforeReport} onClick={reportModal} />
+        <S.Heart src={heart ? Heart : BeforeHeart} onClick={HeartSet} />
       </S.ReportBox>
+
+      {report && <ReportModal reportModal={reportModal}></ReportModal>}
     </S.Container>
   );
 };
 export default ReportBar;
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const [userName, setUserName] = useState("신두평");
-  // const [call, setCall] = useState("010-1111-2222");
