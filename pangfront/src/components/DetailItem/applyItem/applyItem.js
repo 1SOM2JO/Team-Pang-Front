@@ -1,72 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import Header from "../../Header/Header";
 import * as S from "./applyItemStyle.js";
+import AddImg from "./addImg/AddImg.js";
+import AddProduct from "./addProduct/AddProduct.js";
+import AddPrice from "./addPrice/AddPrice.js";
+import AddLocal from "./addLocal/AddLocal.js";
+import AddExplain from "./addExplain/AddExplain.js";
+
+const Event = (e) => {
+  console.log("ghkrdls");
+};
 
 const ApplyItem = () => {
-  const [img, setImg] = useState(null);
-  const [imgBase64, setImgBase64] = useState("");
-  const onChange = () => {};
+  const [itemData, setItemData] = useState("");
+  const receiveItemData = (e) => {
+    setItemData(e);
+  };
   return (
     <S.Container>
       <S.GlobalStyle />
-      <Header></Header>
-      <img src="../../../img/Title.png"></img>
+      <Header />
       <S.MainBox>
-        <S.ImguploadBox>
-          <S.importantImgBox>
-            <S.importantImgText>사진</S.importantImgText>
-            <S.colorText>*</S.colorText>
-          </S.importantImgBox>
-          <S.inputLabel for="imgFile">사진등록</S.inputLabel>
-          <S.Imginput type="file" onChange={onChange} id="imgFile"></S.Imginput>
-        </S.ImguploadBox>
-        <S.ItemExplainBox>
-          <S.ItemNameBox>
-            <S.ItemName>상품명</S.ItemName>
-            <S.colorText>*</S.colorText>
-          </S.ItemNameBox>
-          <S.UserItemName
-            maxlength="1"
-            cols="2"
-            rows="2"
-            placeholder="상품명을 입력해주세요"
-          ></S.UserItemName>
-          <S.PriceBox>
-            <S.Price>가격</S.Price>
-            <S.colorText>*</S.colorText>
-            <S.Unit>단위</S.Unit>
-            <S.colorText>*</S.colorText>
-          </S.PriceBox>
-          <S.PriceInputBox>
-            <S.PriceInput placeholder="가격을 입력해주세요" type="number"/>
-            <S.PriceTail>원</S.PriceTail>
-            <S.UnitInput></S.UnitInput>
-            <S.PriceTail>개</S.PriceTail>
-            <S.chooseUnit color={"#219F70"}>
-              <option value="밥">g</option>
-              <option value="kg">kg</option>
-              <option value="밥">mL</option>
-              <option value="밥">L</option>
-            </S.chooseUnit>
-          </S.PriceInputBox>
-          <S.localBox>
-            <S.ItemName>지역</S.ItemName>
-            <S.colorText>*</S.colorText>
-          </S.localBox>
-          <S.ChooseLocal>
-            <S.chooseCity>도 · 광역시</S.chooseCity>
-            <S.chooseUnit color={"#000000"}>∨</S.chooseUnit>
-            <S.choosevillage>시 · 군 · 구</S.choosevillage>
-            <S.chooseUnit color={"#000000"}>∨</S.chooseUnit>
-          </S.ChooseLocal>
-          <S.Description>설명</S.Description>
-          <S.InputDescription placeholder="설명을 입력하세요"></S.InputDescription>
-          <form>
-            <S.Submit>등록하기</S.Submit>
-          </form>
-        </S.ItemExplainBox>
+        <AddImg />
+        <S.Form>
+          <S.ItemExplainBox>
+            <AddProduct receiveItemData={receiveItemData}>상품명</AddProduct>
+            <AddPrice />
+            <AddLocal />
+            <AddExplain height={'215px'}/>
+            <S.Submit onClick={Event}>등록하기</S.Submit>
+          </S.ItemExplainBox>
+        </S.Form>
       </S.MainBox>
-    </S.Container>
+    </S.Container>//입력 확인 구현, 사진 서버에 보내기, state(리덕스 사용할지 결정)
   );
 };
 export default ApplyItem;

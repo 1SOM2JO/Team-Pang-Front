@@ -1,14 +1,24 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { HeaderBox as HeaderMainBox } from "../../Header/HeaderStyle";
 
 export const GlobalStyle = createGlobalStyle`
     body{
     margin:0;
     padding:0;
     font-family: 'Noto Sans KR', sans-serif;
+   
+ 
+
     }
+    
+    
 `;
 
+export const MainContainer = styled.div`
+  background-color: red;
+`;
 export const MainBox = styled.div`
+  padding-top: 100px;
   flex: 1;
   display: flex;
   margin: 0 90px;
@@ -19,24 +29,8 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 `;
-export const ItemExplainBox = styled.div`
-  margin-top: 30px;
-  flex: 1;
-  height: 550px;
-  padding-left: 30px;
+export const ChattingBox = styled.div`
+  margin-top: 100px;
+  height: 80vh;
+  width: 100%;
 `;
-
-export const Submit = styled.button`
-  margin-top: 30px;
-  background-color: #aaf1bb;
-  width: 95%;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  outline: none;
-`;
-export const Form = styled.form`
-  flex:1;
-`
