@@ -3,6 +3,8 @@ import ItemPage from './ItemPage.js';
 import PI from './../../img/PI.jpg';
 import EI from './../../img/EI.jpg';
 import * as S from './styles.js'
+import Header from './../Header/Header';
+
 
 const MyPage = () => {
     const [nickname, setNickName] = useState('신두평');
@@ -32,33 +34,36 @@ const MyPage = () => {
     )
 
     return (
-        <S.MyPageBack>
-            <S.Header>
-                <S.MyImage></S.MyImage>
-                <S.MyImpormation>
-                    <S.MyNickname>{nickname}님</S.MyNickname>
-                    <S.MyLocation>{location}</S.MyLocation>
-                </S.MyImpormation>
-                <S.My>
-                    <S.ProductDibs>
-                        <div>찜한 상품</div>
-                        <S.ProductNumber>{productNum}개</S.ProductNumber>
-                    </S.ProductDibs>
-                    <S.ExperienceDibs>
-                        <div>찜한 체험</div>
-                        <S.ExperienceNumber>{experienceNum}개</S.ExperienceNumber>
-                    </S.ExperienceDibs>
-                </S.My>
-            </S.Header>
-            <S.Contents>
-                <S.ProductContents>
-                    <div>{productList}</div>
-                </S.ProductContents>
-                <S.ExperienceContents>
-                    <div>{experienceList}</div>
-                </S.ExperienceContents>
-            </S.Contents>
-        </S.MyPageBack>
+        <>
+            <Header></Header>
+            <S.MyPageBack>
+                <S.Header>
+                    <S.MyImage></S.MyImage>
+                    <S.MyImpormation>
+                        <S.MyNickname>{nickname}님</S.MyNickname>
+                        <S.MyLocation>{location}</S.MyLocation>
+                    </S.MyImpormation>
+                    <S.My>
+                        <S.ProductDibs>
+                            <div>찜한 상품</div>
+                            <S.ProductNumber>{productNum}개</S.ProductNumber>
+                        </S.ProductDibs>
+                        <S.ExperienceDibs>
+                            <div>찜한 체험</div>
+                            <S.ExperienceNumber>{experienceNum}개</S.ExperienceNumber>
+                        </S.ExperienceDibs>
+                    </S.My>
+                </S.Header>
+                <S.Contents>
+                    <S.ProductContents>
+                        <div>{productList}</div>
+                    </S.ProductContents>
+                    <S.ExperienceContents>
+                        <div>{experienceList}</div>
+                    </S.ExperienceContents>
+                </S.Contents>
+            </S.MyPageBack>
+        </>
     )
 }
 
