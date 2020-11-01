@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const PriceInputBox = styled.div`
   display: flex;
-  width: 85%;
+  width: 95%;
 `;
 export const PriceInput = styled.input`
   border: 1px solid #c4c4c4;
@@ -11,7 +11,9 @@ export const PriceInput = styled.input`
     text-align: center;
     padding-top: 15px;
     color: #d4d4d4;
+   
   }
+  width:100%;
   text-align: center;
   -webkit-appearance: none;
   ime-mode: disabled;
