@@ -143,8 +143,8 @@ export const Check = styled.div`
   }
   > div {
     > input {
-      width: 592px;
-      margin-right: 20px;
+      margin-right: 0;
+      width: 708px;
     }
   }
 `;

@@ -22,9 +22,34 @@ const Register = () => {
     }));
   }, []);
 
-  const onCheck = () => {};
+  const onBtnClick = useCallback(() => {
+    const apiKey = "asjdlfkas345dflah325sdfh4lkj5h352";
 
-  const onBtnClick = () => {};
+    const { id, nickname, password, checkNumber } = inputData;
+
+    (async () => {
+      try {
+        const res = await axios.post(
+          "http://10.156.145.143:80/user/signup/smsSender",
+          {
+            id: id,
+            permission: "SELLER",
+            nickname: nickname,
+            password: password,
+            code: checkNumber,
+          },
+          {
+            headers: {
+              "x-api-key": apiKey,
+            },
+          }
+        );
+      } catch (err) {
+        alert(err);
+      }
+    })();
+  }, [inputData]);
+
   const onCheckClick = useCallback(() => {
     const apiKey = "asjdlfkas345dflah325sdfh4lkj5h352";
 
@@ -45,7 +70,7 @@ const Register = () => {
         );
         setCheck(true);
       } catch (err) {
-        alert("전화번호가 잘못됬습니다");
+        alert("전화번호가 잘못됐습니다");
       }
     })();
   }, [inputData]);
@@ -124,7 +149,6 @@ const Register = () => {
                 value={inputData.checkNumber}
               />
             </div>
-            <button onClick={onCheck}>인증</button>
           </S.Check>
         )}
       </S.InputDiv>
