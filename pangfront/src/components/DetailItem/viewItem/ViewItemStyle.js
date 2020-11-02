@@ -21,7 +21,7 @@ export const MainBox = styled.div`
   padding-top: 100px;
   flex: 1;
   display: flex;
-  margin: 0 90px;
+  margin: 0 90px; 
 `;
 export const Container = styled.div`
   width: 100vw;

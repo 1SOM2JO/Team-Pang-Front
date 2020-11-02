@@ -12,12 +12,14 @@ export const MainBox = styled.div`
   flex: 1;
   display: flex;
   margin: 0 90px;
+  padding-top:100px;
 `;
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  
 `;
 export const ItemExplainBox = styled.div`
   margin-top: 30px;

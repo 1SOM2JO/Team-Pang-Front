@@ -2,8 +2,7 @@ import React from "react";
 import Header from "../../Header/Header.js";
 import AddImg from "../applyItem/addImg/AddImg";
 import AddProduct from "../applyItem/addProduct/AddProduct.js";
-import AddExPrice from "../applyItem/addPrice/AddPrice.js";
-import AddPrice from "../applyItem/addPrice/AddPrice.js";
+import AddExPrice from "./addExPrice/AddExPrice";
 import AddLocal from "../applyItem/addLocal/AddLocal.js";
 import AddExplain from "../applyItem/addExplain/AddExplain.js";
 import AddTime from "./addTime/AddTime.js"
@@ -19,7 +18,7 @@ const ApplyExperience = () => {
         <S.Form>
           <S.ItemExplainBox>
             <AddProduct>체험명</AddProduct>
-            <AddPrice />
+            <AddExPrice/>
             <AddLocal />
             <AddTime/>
             <AddExplain height={'165px'}/>
