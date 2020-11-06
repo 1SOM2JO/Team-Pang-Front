@@ -11,7 +11,7 @@ export const Price = styled.div`
 `;
 export const Unit = styled.div`
   font-size: 18px;
-  margin-left: 170px;
+  margin-left: 150px;
   font-weight: bold;
 `;
 export const PriceInputBox = styled.div`

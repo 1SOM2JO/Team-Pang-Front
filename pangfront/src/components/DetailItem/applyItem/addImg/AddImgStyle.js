@@ -30,7 +30,8 @@ export const inputLabel = styled.label`
   align-items: center;
   color: #d4d4d4;
   background-image: url(${(props) => props.img});
-  background-size: 100% 100%;
+  /* background-size: 100% 100%; */
+
 `;
 export const Imginput = styled.input`
   width: 0px;
