@@ -3,16 +3,13 @@ import BigCityName from "../BigCity.js";
 import smallCity from "../smallCity.js";
 import * as S from "./AddLocalStyle.js";
 
-const AddLocal = () => {
-  const [bigCity, setBigCity] = useState("도 · 광역시");
-  const [city, setCity] = useState("시 · 군 · 구");
+const AddLocal = ({ bigCity, setBigCity, city, setCity }) => {
   const bigCityChange = useCallback((e) => {
     setBigCity(e.target.value);
   }, []);
   const cityChange = useCallback((e) => {
     setCity(e.target.value);
   }, []);
-
   return (
     <>
       <S.localBox>
@@ -28,7 +25,7 @@ const AddLocal = () => {
         <S.chooseUnit color={"#000000"} onChange={cityChange}>
           {useCallback(
             smallCity(bigCity).map((smallCityName) => {
-              return <option >{smallCityName}</option>;
+              return <option>{smallCityName}</option>;
             }),
             [bigCity]
           )}

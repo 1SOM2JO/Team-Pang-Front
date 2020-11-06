@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./AddExPriceStyle.js";
-const AddExPrice = () => {
+const AddExPrice = ({price, setPrice}) => {
   return (
     <>
       <S.PriceBox>

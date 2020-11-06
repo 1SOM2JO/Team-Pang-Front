@@ -1,7 +1,9 @@
 import React, { useState, useCallback } from "react";
 import * as S from "./AddPriceStyle.js";
-const AddPrice = () => {
-  const [count, setCount] = useState("개");
+const AddPrice = ({ count, setPrice, setCount }) => {
+  const priceChange = useCallback((e) => {
+    setPrice(e.target.value);
+  }, []);
   const countChange = useCallback((e) => {
     setCount(e.target.value);
   }, []);
@@ -18,6 +20,7 @@ const AddPrice = () => {
           placeholder="가격을 입력해주세요"
           type="number"
           required
+          onChange={priceChange}
         />
         <S.PriceTail>원</S.PriceTail>
         <S.UnitInput type="number"></S.UnitInput>
@@ -27,6 +30,7 @@ const AddPrice = () => {
           <option>kg</option>
           <option>mL</option>
           <option>L</option>
+          <option>개</option>
         </S.chooseUnit>
       </S.PriceInputBox>
     </>
