@@ -1,10 +1,15 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import * as S from "./styles";
 
 const LoginHeader = ({ isLoggedin }) => {
   const [loginCheck, setloginCheck] = useState(isLoggedin);
   const onLoginCheck = () => {
     setloginCheck(!loginCheck);
+  };
+  const history = useHistory();
+  const onRegister = () => {
+    history.push("/RegisterEnter");
   };
   const pageChange = () => {
     window.location.href = "./Login";
@@ -21,7 +26,7 @@ const LoginHeader = ({ isLoggedin }) => {
           ) : (
             <>
               <div onClick={pageChange}>로그인</div>
-              <div onClick={onLoginCheck}>회원가입</div>
+              <div onClick={onRegister}>회원가입</div>
             </>
           )}
         </S.NoLoginText>
