@@ -5,5 +5,4 @@ export const HeaderBox = styled.div`
     width:100vw;
     height:100px;
     position:fixed;
-    z-index:3;
 `

@@ -6,7 +6,6 @@ export const GlobalStyle = createGlobalStyle`
     margin:0;
     padding:0;
     font-family: 'Noto Sans KR', sans-serif;
-   
  
 
     }
@@ -34,3 +33,14 @@ export const ChattingBox = styled.div`
   height: 80vh;
   width: 100%;
 `;
+export const reportBackGround = styled.div`
+  background-color: rgb(43, 40, 40, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:3;
+  width: 100vw;
+  height: 100vh;
+  
+`;
+
