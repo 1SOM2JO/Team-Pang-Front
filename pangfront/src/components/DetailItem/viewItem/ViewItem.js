@@ -7,12 +7,14 @@ import ReportBar from "./reportBar/ReportBar.js";
 import InputChatting from "./inputChatting/InputChatting.js";
 
 const ViewItem = () => {
+  const [report, setReport] = useState(false);
   return (
     <>
+    {report && <S.reportBackGround/>}
       <S.GlobalStyle />
-      <Header />
+      <Header/>
       <S.MainBox>
-        <SetImg ReportBar={ReportBar}></SetImg>
+        <SetImg ReportBar={ReportBar} report={report} setReport={setReport}></SetImg>
         <ItemDetail></ItemDetail>
       </S.MainBox>
       <S.ChattingBox>

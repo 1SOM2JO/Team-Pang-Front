@@ -9,6 +9,7 @@ export const container = styled.div`
   top: 20%;
   position: fixed;
   border-radius: 1rem;
+  z-index:4;
 `;
 
 export const TitleBox = styled.div`
