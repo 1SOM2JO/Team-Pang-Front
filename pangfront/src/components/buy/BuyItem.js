@@ -1,10 +1,10 @@
 import React from "react";
 import * as S from "./styles";
-import farmer from "./farmer.jpg";
+// import farmer from "./farmer.jpg";
 const BuyItem = ({ product }) => {
   return (
     <S.BuyItemMain>
-      <img src={farmer}></img>
+      {/* <img src={farmer}></img> */}
       <div id="name">{product.name}</div>
       <div id="price">
         {product.price}원 / {product.unit}

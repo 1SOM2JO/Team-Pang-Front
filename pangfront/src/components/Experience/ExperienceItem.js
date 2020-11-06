@@ -1,13 +1,13 @@
 import React from "react";
 import * as S from "./styles";
-import farmer from "./farmer.jpg";
+// import farmer from "./farmer.jpg";
 const ExperienceItem = ({ users }) => {
   const { id, exname, exwhere, price, endtime } = users;
   console.log("1");
   console.log(users);
   return (
     <S.ExperienceItemMain>
-      <img src={farmer}></img>
+      {/* <img src={farmer}></img> */}
       <div id="title">{users.exname}</div>
       <S.InnerExperience>
         <div>
