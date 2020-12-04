@@ -3,6 +3,7 @@ import * as S from "./styles";
 import axios from "axios";
 
 const Register = () => {
+  const [phoneCheck, setPhoneCheck] = useState();
   const [inputData, setInputData] = useState({
     nickname: "",
     id: "",
@@ -22,9 +23,41 @@ const Register = () => {
     }));
   }, []);
 
-  const onCheck = () => {};
+  const onCheck = (e) => {
+    setPhoneCheck(e.target.value);
+    console.log(e.target.value);
+    console.log(e.target);
+    console.log("완료");
+  };
 
-  const onBtnClick = () => {};
+  const onBtnClick = () => {
+    const apiKey = "asjdlfkas345dflah325sdfh4lkj5h352";
+    const { numberFirst, numberSecond, numberThird } = inputData;
+    axios
+      .post(
+        "http://3.34.137.19:80/user/signup/basic",
+        {
+          id: inputData.id,
+          permission: "SELLER",
+          nickname: inputData.nickname,
+          password: inputData.password,
+          phonenumber: `${numberFirst}-${numberSecond}-${numberThird}`,
+          code: inputData.checkNumber,
+        },
+        {
+          headers: {
+            "x-api-key": apiKey,
+          },
+        }
+      )
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err.response);
+        console.log(err.request);
+      });
+  };
   const onCheckClick = useCallback(() => {
     const apiKey = "asjdlfkas345dflah325sdfh4lkj5h352";
 
@@ -33,7 +66,7 @@ const Register = () => {
     (async () => {
       try {
         const res = await axios.post(
-          "http://10.156.145.143:80/user/signup/smsSender",
+          "http://3.34.137.19:80/user/signup/smsSender",
           {
             phonenumber: `${numberFirst}-${numberSecond}-${numberThird}`,
           },
@@ -45,7 +78,7 @@ const Register = () => {
         );
         setCheck(true);
       } catch (err) {
-        alert("전화번호가 잘못됬습니다");
+        alert("전화번호가 잘못됐습니다");
       }
     })();
   }, [inputData]);
